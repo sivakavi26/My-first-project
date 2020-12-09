@@ -1,0 +1,19 @@
+{% extends 'ecom_app/main.html' %}
+{% load static %}
+{% block content %}
+<div class="row">
+    {% for product in products %}
+    <div style="padding-bottom: 10px;" class="col-lg-3">
+        <img class="thumbnail" src="{{product.imageURL}}" >
+        <div class="box-element product">    
+            <h6><strong>{{product.name}}</strong></h6>
+            <h4 style="float:inline-end;font-size: 20px;"><strong>₹{{product.price|floatformat:2}}</strong></h4>
+            <hr>
+            <button style="width: 120px;" data-product="{{product.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+            <a class="btn btn-outline-success" href="#">View</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}
