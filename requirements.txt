@@ -1,7 +1,3 @@
-anaconda-project
-conda
-conda-build
-conda-package-handling
 Django
 pytest
 gunicorn
